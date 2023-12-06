@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-class {
+  @apply xl:container mx-auto md:px-12 px-5 xl:px-0;
+}
+.bg-primaryColor {
+  @apply bg-gradient-to-t from-teal-800 to-teal-500;
+}
+
+.input-my {
+  position: relative;
+  margin: 30px 0;
+  border-bottom: 2px solid #fff;
+}
+.input-my label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-my input:focus ~ label,
+.input-my input:valid ~ label,
+.input-my input:-webkit-autofill:focus ~ label
+.input-my input:-webkit-autofill:valid ~ label
+{
+  top: -5px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+    -webkit-text-fill-color: white !important;
+}
+.input-my input {
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff !important;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
